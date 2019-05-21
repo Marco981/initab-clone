@@ -3,31 +3,25 @@
     flex-basis:9rem;
     display: flex;
     flex-flow: column;
+    flex-shrink:0;
     justify-content: space-between;
     height:100vh;
 }
 
-.Navigation__linksContainer {
-    padding: 0;
-    margin: 0;
-}
-
 .Navigation__listItem {
-    list-style:none;
-    padding: 0;
     display: flex;
     padding-bottom:.3rem;
 }
 
 .Navigation__link {
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1.6rem;
     background: transparent;
     border:none;
     text-transform: uppercase;
-    font-size:.65rem;
+    font-size:.8rem;
     margin-left: .6rem;
-    margin-top: 1.3rem;
+    margin-top: 1.5rem;
     display:flex;
     align-items:center;
     justify-content:center;
