@@ -1,0 +1,53 @@
+.Post {
+    padding-left:.8rem;
+    margin-bottom: 2.5rem;
+    display: block;
+    position: relative;
+    font-size:.9rem;
+    line-height: 1.2;
+}
+
+.Post::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--grey);
+    transition: background-color .3s ease-in-out;
+}
+
+.Post:hover::before {
+    background-color: var(--green);
+}
+
+.Post > * {
+    padding-bottom:.3rem;
+}
+
+.Content {
+    color: var(--off-white);
+}
+
+.PostedBy {
+    color: var(--azure);
+}
+
+.User {
+    color:var(--yellow);
+}
+
+.Score {
+    color: var(--grey);
+}
+
+.CommentLink {
+    color:var(--pink);
+    text-decoration: underline;
+    transition: color .3s ease-in-out;
+}
+
+.CommentLink:hover {
+    color: var(--azure);
+}
