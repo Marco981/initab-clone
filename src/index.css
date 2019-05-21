@@ -16,8 +16,7 @@
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue",Helvetica,
-    sans-serif;
+  font-family: "Inconsolata",serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height:100%;
