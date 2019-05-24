@@ -96,40 +96,40 @@
     ],
     "gitHub": [
         {
-            "repo": "",
-            "issue": "",
-            "content": "",
-            "url": ""
+            "repo": "nuxt/nuxt.js",
+            "issue": "2006",
+            "content": "How to get data from local json file using actions and axios.get()?",
+            "url": "https://github.com/nuxt/nuxt.js/issues/2006"
         },
         {
-            "repo": "",
-            "issue": "",
-            "content": "",
-            "url": ""
+            "repo": "ReactTraining/react-router",
+            "issue": "6140",
+            "content": "i keep getting this error --You should not use <Link> outside a <Router>",
+            "url": "https://github.com/ReactTraining/react-router/issues/6140"
         },
         {
-            "repo": "",
-            "issue": "",
-            "content": "",
-            "url": ""
+            "repo": "ReactTraining/react-router",
+            "issue": "6634",
+            "content": "Invariant violation after update to react-router 4.4.0",
+            "url": "https://github.com/ReactTraining/react-router/issues/6634"
         },
         {
-            "repo": "",
-            "issue": "",
-            "content": "",
-            "url": ""
+            "repo": "api-platform/core",
+            "issue": "1879",
+            "content": "Add custom key to response",
+            "url": "https://github.com/api-platform/core/issues/1879"
         },
         {
-            "repo": "",
-            "issue": "",
-            "content": "",
-            "url": ""
+            "repo": "Aloshi/EmulationStation",
+            "issue": "685",
+            "content": "Retropie Pi Zero Video Snaps cause high CPU Utilization",
+            "url": "https://github.com/Aloshi/EmulationStation/issues/685"
         },
         {
-            "repo": "",
-            "issue": "",
-            "content": "",
-            "url": ""
+            "repo": "facebook/create-react-app",
+            "issue": "2273",
+            "content": "Does create-react-app includes a reset css?",
+            "url": "https://github.com/facebook/create-react-app/issues/2273"
         }
     ]
 }
