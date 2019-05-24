@@ -2,9 +2,53 @@
     flex: 2;
 }
 
+.HistoryLinks {
+    border-bottom: 1px solid var(--grey);
+    height: 50%;
+}
+
 .Title {
     color: var(--azure);
     text-align: center;
     text-transform: uppercase;
     margin: 2.5rem 0;
 }
+
+.HistoryEntryContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom:1.5rem;
+}
+
+.HistoryEntryContainer:last-child {
+    padding-bottom:.3rem;
+}
+
+.HistoryEntry {
+    display: flex;
+}
+
+.HistoryIcon {
+    margin-right: 5px;
+    border:1px solid var(--green);
+    border-radius: 2px;
+}
+
+.HistoryContent {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--blue);
+    max-width: 200px;
+    transition: color .3s ease-in-out;
+}
+
+.HistoryContent:hover {
+    color:var(--yellow);
+}
+
+.HistoryDate {
+    color: #999;
+}
+

@@ -1,13 +1,20 @@
 import React from 'react'
 import styles from './History.module.css'
 import { FaHistory } from 'react-icons/fa'
+import Moment from 'react-moment'
 
 const history = props => {
-  const entries = props.entries.map(entry => (
-    <li className={styles.HistoryEntryContainer}>
+  const entries = props.entries.map((entry, index) => (
+    <li key={index} className={styles.HistoryEntryContainer}>
       <div className={styles.HistoryEntry}>
-        <img src={entry.iconURL} alt={entry.iconAlt} />
-        <a href={entry.contentURL}>{entry.content}</a>
+        <img
+          className={styles.HistoryIcon}
+          src={entry.iconURL}
+          alt={entry.iconAlt}
+        />
+        <a className={styles.HistoryLink} href={entry.contentURL}>
+          <p className={styles.HistoryContent}>{entry.content}</p>
+        </a>
       </div>
       <div className={styles.HistoryDate}>{entry.date}</div>
     </li>
@@ -20,6 +27,15 @@ const history = props => {
           relevant javascript history
         </h6>
         {entries}
+      </div>
+      <div>
+        <Moment
+          onChange={val => {
+            console.log(val)
+          }}
+        >
+          H HH
+        </Moment>
       </div>
     </section>
   )
