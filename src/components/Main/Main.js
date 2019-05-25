@@ -13,21 +13,25 @@ class Main extends Component {
   }
 
   componentDidMount () {
-    axios.get('/data.json').then(response => {
-      const posts = response.data
-      this.setState({
-        ...posts
+    axios
+      .get('/data.json')
+      .then(response => {
+        const posts = response.data
+        this.setState({
+          ...posts
+        })
       })
-    })
+      .catch(error => {
+        console.log(error)
+      })
   }
 
   render () {
-    console.log(this.state.reddit)
     return (
       <main className={styles.Main}>
         <Reddit posts={this.state.reddit} />
         <History entries={this.state.history} />
-        <GitHub />
+        <GitHub issues={this.state.gitHub} />
       </main>
     )
   }
