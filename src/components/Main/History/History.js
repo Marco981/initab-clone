@@ -13,7 +13,7 @@ const history = props => {
           alt={entry.iconAlt}
         />
         <a className={styles.HistoryLink} href={entry.contentURL}>
-          <p className={styles.HistoryContent}>{entry.content}</p>
+          {entry.content}
         </a>
       </div>
       <div className={styles.HistoryDate}>{entry.date}</div>
@@ -29,13 +29,7 @@ const history = props => {
         {entries}
       </div>
       <div>
-        <Moment
-          onChange={val => {
-            console.log(val)
-          }}
-        >
-          H HH
-        </Moment>
+        <Moment />
       </div>
     </section>
   )
