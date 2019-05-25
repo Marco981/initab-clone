@@ -1,3 +1,68 @@
 .GitHub {
     flex:1;
+    text-align: center;
+    margin-left:1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: .5rem;
+    width: calc(100% - 1.5rem);
+    height: 80%;
+    border-bottom:1px solid var(--grey);
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
 }
+
+*::-webkit-scrollbar { 
+    display: none;  
+  }
+
+.Title {
+    color: var(--azure);
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+}
+
+.GitlabLink {
+    color:var(--blue);
+    font-size: .8rem;
+}
+
+.SwitchContainer {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    font-family: Helvetica, sans-serif;
+    font-size: .8rem;
+    line-height: 1.4;
+}
+
+.SwitchActive {
+    color: var(--yellow);
+    margin-right: .8rem;
+    position: relative;
+}
+
+.SwitchActive::after {
+    content: '';
+    border:5px solid transparent;
+    border-bottom:5px solid var(--yellow);
+    position: absolute;
+    bottom:-.5rem;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.Switch {
+    color: var(--pink);
+    transition: color .3s ease-in-out;
+}
+
+.Switch:hover {
+    color:var(--green);
+}
+
+.IssuesContainer {
+    margin-top: 2rem;
+}
+
