@@ -1,0 +1,33 @@
+.IssueLink {
+    font-size: .9rem;
+    display:block;
+    padding-left:.8rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    text-align: left;
+}
+
+.IssueLink::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--grey);
+    transition: background-color .3s ease-in-out;
+}
+
+.IssueLink:hover::before {
+    background-color: var(--green);
+}
+
+.IssueTitle {
+    color: var(--blue);
+    margin-bottom:.5rem;
+}
+
+.IssueNumber {
+    color:var(--yellow);
+    margin-bottom:.5rem;
+}
