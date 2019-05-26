@@ -151,22 +151,42 @@ const navigation = props => (
       </svg>
       <ul className={styles.socialContainer}>
         <li className={[styles.socialItem, styles.facebook].join(' ')}>
-          <a style={{ display: 'flex' }} href='https://www.facebook.com/'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            style={{ display: 'flex' }}
+            href='https://www.facebook.com/'
+          >
             <FaFacebookF />
           </a>
         </li>
         <li className={[styles.socialItem, styles.linkedin].join(' ')}>
-          <a style={{ display: 'flex' }} href='https://www.linkedin.com'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            style={{ display: 'flex' }}
+            href='https://www.linkedin.com'
+          >
             <FaLinkedinIn />
           </a>
         </li>
         <li className={[styles.socialItem, styles.twitter].join(' ')}>
-          <a style={{ display: 'flex' }} href='https://www.twitter.com'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            style={{ display: 'flex' }}
+            href='https://www.twitter.com'
+          >
             <FaTwitter />
           </a>
         </li>
         <li className={[styles.socialItem, styles.reddit].join(' ')}>
-          <a style={{ display: 'flex' }} href='https://www.reddit.com'>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            style={{ display: 'flex' }}
+            href='https://www.reddit.com'
+          >
             <FaRedditAlien />
           </a>
         </li>
