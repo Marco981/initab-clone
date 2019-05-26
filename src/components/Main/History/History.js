@@ -2,42 +2,34 @@ import React, { Component } from 'react'
 import styles from './History.module.css'
 import { FaHistory } from 'react-icons/fa'
 
-const DATE = new Date()
-
-const INITIALTIME = DATE.toLocaleTimeString('default', {
-  hour: '2-digit',
-  minute: '2-digit',
-  hour12: true
-})
-
-const splitDate = DATE.toString().split(' ')
-
-const NEWDATE = `${splitDate[1]} ${splitDate[2]}, ${splitDate[3]}`
+const DATE = Date.now()
 
 class History extends Component {
   state = {
-    time: INITIALTIME,
-    date: NEWDATE
+    time: DATE
   }
 
   componentDidMount () {
     this.interval = setInterval(() => {
-      return this.handleTime(new Date())
-    }, 10000)
+      this.setState({ time: DATE })
+    }, 3000)
   }
 
-  handleTime = date => {
-    const newTime = date.toLocaleTimeString('default', {
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: true
-    })
-    this.setState({ time: newTime })
-  }
+  formatAMPM = () => {
+    let hours = new Date().getHours()
+    let minutes = new Date().getMinutes()
+    const ampm = hours >= 12 ? 'pm' : 'am'
 
-  // handleDate =
+    hours = hours % 12
+    hours = hours || 12
+    minutes = `0${minutes}`.slice(-2)
+    const strTime = `${hours}:${minutes}`
+    return [strTime, ampm]
+  }
 
   render () {
+    const date = Date(this.state.time.toString()).split(' ')
+    const dateString = `${date[1]} ${date[2]}, ${date[3]}`
     const entries = this.props.entries.map((entry, index) => (
       <li key={index} className={styles.HistoryEntryContainer}>
         <div className={styles.HistoryEntry}>
@@ -65,10 +57,10 @@ class History extends Component {
         </div>
         <div className={styles.TimeSection}>
           <h2 className={styles.Time}>
-            {this.state.time.split(' ')[0]}
+            {this.formatAMPM()[0]}
             <span className={styles.HourCycle}>
-              {this.state.time.split(' ')[1]}
-              <h5 className={styles.Date}>{this.state.date}</h5>
+              {this.formatAMPM()[1]}
+              <h5 className={styles.Date}>{dateString}</h5>
             </span>
           </h2>
         </div>
